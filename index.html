@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/js/main.js">
+    <title></title>
+</head>
+<body>
+
+	<!-- Задачи для решения -->
+
+	<!-- События через атрибуты -->
+
+    <!-- 1 -->
+    <!-- <button onclick="alert('Привет!')">Нажми на меня</button> -->
+    
+	<!-- 2 -->
+    <!-- <button onmouseover="alert('Привет!')">Наведи на меня</button> -->
+
+	<!-- 3 -->
+    <!-- <button ondblclick="alert('Привет!')">Двойной щелчок по мне!</button> -->
+    
+	<!-- 4 -->
+	<!-- <style>
+		div {
+			height: 300px;
+			width: 300px;
+			border: 1px solid red;
+		}
+	</style>
+     <div onmouseout="alert('Привет!')">Наведи на меня мышь - а потом убери!</div>  -->
+
+	<!-- Метод getElementById и работа с атрибутами -->
+
+	<!-- 5 -->
+    <!-- <input type="text" value="Ку-ку" id="test">
+    <button onclick="alert('Ку-ку')">Нажми на меня!</button> -->
+
+	<!-- 6 -->
+    <!-- <script>
+		function func(){
+			elem = document.getElementById('test');
+			elem.value = 'Ой, я поменял свой текст!';
+		}
+	</script> -->
+
+	<!-- Работа с this -->
+
+	<!-- 11 -->
+    <!-- <script>
+		function func(elem){
+			elem.value = 'Ку-ку';
+		}
+	</script>
+    <p>
+        input type="submit"
+    </p>
+    <input type="submit" value="Нажми на меня!" onclick="func(this)">   -->
+
+	<!-- 12 -->
+    <!-- <script>
+		function func(elem){
+			elem.value = 'О, теперь на меня больше не нажать!';
+			elem.disabled = true;
+		}
+	</script>
+    <p>
+        input type="submit"
+    </p>
+    <input type="submit" value="Нажми на меня!" onclick="func(this)">   -->
+
+	<!-- Работа с CSS -->
+
+	<!-- 14 -->
+    <!-- <script>
+		function func(){
+			elem = document.getElementById('test');
+			elem.style.color = 'red';
+			elem.style.width = '300px';
+		}
+	</script>
+    <input type="text" value="Ку-ку" id="test">
+    <button onclick="func()">Нажми на меня!</button>   -->
+
+	<!-- 15 -->
+    <!-- <script>
+		function hide(){
+			elem = document.getElementById('test');
+			elem.style.display = 'none';
+		}
+		function show(){
+			elem = document.getElementById('test');
+			elem.style.display = 'inline-block';
+		}
+	</script>
+    <input type="text" value="Ку-ку" id="test">
+    <button onclick="hide()">Нажми на меня!</button>
+    <button onclick="show()">Нажми потом на меня!</button>   -->
+
+	<!-- 16 -->
+	<!-- <script>
+		function go(){
+			elem = document.getElementById('test');
+			elem.value = 'Ой, я поменял свой текст и css!';
+			elem.style.width = '300px';
+			elem.style.height = '50px';
+			elem.style.color = 'red';
+			elem.style.borderRadius = '10px';
+		}
+	</script>
+    <input type="text" value="Ку-ку" id="test"><br></br>
+    <button onclick="func()">Нажми на меня!</button>   -->
+
+	<!-- 17 -->
+    <!-- <script>
+		function block(){
+			var block = document.getElementById('block');
+			var unblock = document.getElementById('unblock');
+			block.value = 'О, теперь на меня больше не нажать!';
+			block.disabled = true;
+			unblock.style.display = 'block';
+		}
+		function unblock(){
+			var block = document.getElementById('block');
+			var unblock = document.getElementById('unblock');
+			block.value = 'О, на меня снова можно нажимать!';
+			block.disabled = false;
+			unblock.style.display = 'none';
+		}
+	</script>
+    <p>
+        input type="submit"
+    </p>
+    <input type="submit" onclick="block(this)" value="Нажми на меня!" id="block">
+    <input type="submit" onclick="unblock('button')" value="Нажми на меня чтобы отблокировать элемент" id="unblock">   -->
+
+	<!-- 18 -->
+    <!-- <script>
+		function func(elem){
+			elem.value = parseInt(elem.value) + 1;
+		}
+	</script>
+    <p>
+        Кнопка считает количество нажатий по ней.
+    </p>
+    <input type="submit" onclick="func(this)" value="0">   -->
+
+	<!-- 19 -->
+    <!-- <script>
+		function func(){
+			elem = document.getElementById('test');
+			elem.value = 'Теперь я плаваю справа!';
+			elem.style.cssFloat = 'right';
+		}
+	</script>
+    <input type="text" value="Ку-ку" id="test">
+    <button onclick="func()">Нажми на меня!</button>   -->
+
+	<!-- 20 -->
+	<!-- <script>
+		function func(){
+			elem = document.getElementById('test');
+			elem.value = 'Мои css классы: '+elem.className;
+		}
+	</script>
+    <input type="text" value="Ку-ку" id="test" class="eee www ddd">
+    <button onclick="func()">Нажми на меня!</button>   -->
+
+	<!-- 21 -->
+	<!-- <script>
+		function func(){
+			var test1 = document.getElementById('test1');
+			var test2 = document.getElementById('test2');
+			var tmp = test1.value;
+			test1.value = test2.value;
+			test2.value = tmp;
+		}
+	</script>
+    <input type="text" value="Привет!" id="test1">
+    <input type="text" value="Пока!" id="test2">
+    <button onclick="func()">Нажми на меня!</button>   -->
+
+	<!-- 22 -->
+	<!-- <script>
+		function func(){
+			var test = document.getElementById('test');
+			var value = test.value;
+			var result = document.getElementById('result');
+			result.value =  value*value;
+		}
+	</script>
+    <p>
+        По нажатию на кнопку в нижнем инпуте появится квадрат числа из верхнего инпута.
+    </p>
+    <input type="text" value="" placeholder="Введите число!" id="test">
+    <input id="result" value="Здесь появится результат." disabled>
+    <button onclick="func()">Нажми на меня!</button>   -->
+
+	<!-- 23 -->
+	<!-- <script>
+		function func(){
+			var test = document.getElementById('test');
+			var value = test.value;
+			if(!isNaN(value)){
+				var result = document.getElementById('result');
+				result.value =  value*value;
+			} else {
+				alert('Введено не число!')
+			}
+		}
+	</script>
+    <p>
+        По нажатию на кнопку в нижнем инпуте появится квадрат числа из верхнего инпута. Если введено не число - должна показаться ошибка.
+    </p>
+    <input type="text" name="" placeholder="Введите число!" id="test">
+    <input id="result" value="Здесь появится результат." disabled>
+    <button onclick="func()">Нажми на меня!</button>   -->
+
+	<!-- 25 -->
+	<!-- <script>
+		function add(text){
+			var input = document.getElementById('input');
+			input.value = input.value + text;
+		}
+	</script>
+    <input type="text" value="" id="input"><br>
+    <input type="submit" onclick="add('+')" value="Я добавлю +"><br>
+    <input type="submit" onclick="add('-')" value="Я добавлю -"><br>
+    <input type="submit" onclick="add('/')" value="Я добавлю /"><br>
+    <input type="submit" onclick="add('*')" value="Я добавлю *"><br>
+    <br>    
+    <input type="submit" onclick="add('1')" name="" value="1" id=""><br>
+    <input type="submit" onclick="add('2')" name="" value="2" id=""><br>
+    <input type="submit" onclick="add('3')" name="" value="3" id=""><br>
+    <input type="submit" onclick="add('4')" name="" value="4" id=""><br>
+    <input type="submit" onclick="add('5')" name="" value="5" id=""><br>
+    <input type="submit" onclick="add('6')" name="" value="6" id=""><br>
+    <input type="submit" onclick="add('7')" name="" value="7" id=""><br>
+    <input type="submit" onclick="add('8')" name="" value="8" id=""><br>
+    <input type="submit" onclick="add('9')" name="" value="9" id=""><br>
+    <input type="submit" onclick="add('0')" name="" value="0" id=""><br>   -->
+
+
+	<!-- Свойства innerHTML, outerHTML -->
+
+	<!-- 1 -->
+	<!-- <script>
+		function func(){
+			var test = document.getElementById('test');
+			test.innerHTML = 'Ку-ку! А я <b>жирный</b>!';
+		}
+	</script>
+    <p id="test">При нажатии на кнопку текст в абзаце поменяется.</p>
+    <input type="submit" value="Нажмите на меня!" onclick="func()">   -->
+
+	<!-- 2 -->
+	<!-- <script>
+		function func(){
+			var test = document.getElementById('test');
+			test.outerHTML = '<h3>Абзац превратился в h3!</h3>';
+		}
+	</script>
+    <p id="test">При нажатии на кнопку текст в абзаце поменяется</p>
+    <input type="submit" value="Нажмите на меня!" onclick="func()">   -->
+
+	<!-- 3 -->
+	<!-- <script>
+		function func(){
+			var test = document.getElementById('test');
+			test.outerHTML = '<h3>'+test.innerHTML+'</h3>';
+		}
+	</script>
+    <p id="test">При нажатии на кнопку абзац станет h3, но текст останется</p>
+    <input type="submit" value="Нажмите на меня!" onclick="func()"> -->
+	
+	<!-- 4 -->
+	<!-- <script>
+		function func(){
+			var input1 = +document.getElementById('input1').value;
+			var input2 = +document.getElementById('input2').value;
+			var result = document.getElementById('result');
+			result.innerHTML = input1 + input2;
+		}
+	</script>
+    <input type="text" name="" id="input1">
+    +
+    <input type="text" name="" id="input2">
+    =
+    <span id="result">?</span>
+    <br>
+    <button onclick="func()">Нажмите, чтобы сложить</button> -->
+
+	
+	<!-- Метод getElementsByTagName -->
+
+	<!-- 5 -->
+	<!-- <script>
+		function func(){
+			var elements = document.getElementsByTagName('p');
+			for (var i = 0; i < elements.length; i++){
+				elements[i].innerHTML = 'Ку-ку!';
+			}
+		}
+	</script>
+    <p>При нажатии на кнопку текст в каждом абзаце поменяется.</p>
+    <p>При нажатии на кнопку текст в каждом абзаце поменяется.</p>
+    <p>При нажатии на кнопку текст в каждом абзаце поменяется.</p>
+    <p>При нажатии на кнопку текст в каждом абзаце поменяется.</p>
+    <h2>А я h2 и не поменяюсь</h2>
+    <input type="submit" value="Нажмите на меня!" onclick="func()">  -->
+
+
+	<!-- Методы setAttribute, getAttribute, removeAttribute, hasAttribute -->
+
+	<!-- 8 -->
+	<!-- <script>
+		function func(){
+			var test = document.getElementById('test');
+			alert(test.getAttribute('class'));
+		}
+	</script>
+    <p id="test" class="my-class">Абзац с class="my-class"</p>
+    <input type="submit" value="Нажми - и я выведу класс абзаца" onclick="func()">  -->
+
+	<!-- 9 -->
+	<!-- <script>
+		function show(){
+			var test = document.getElementById('test');
+			alert(test.getAttribute('class'));
+		}
+		function del(){
+			var test = document.getElementById('test');
+			test.removeAttribute('class');
+			alert('Класс удален! Нажмите на первую кнопку чтобы проверить это!')
+		}
+	</script>
+    <p id="test" class="my-class">Абзац с class="my-class". Класс задает красный цвет</p>
+    <input type="submit" value="Нажми - я выведу класс абзаца." onclick="show()"><br>
+    <input type="submit" value="Нажми - и я удалю атрибут class для абзаца" onclick="del()">   -->
+
+	<!-- 10 -->
+	<!-- <script>
+		function show(){
+			var test = document.getElementById('test');
+			alert(test.getAttribute('class'));
+		}
+		function del(){
+			var test = document.getElementById('test');
+			test.setAttribute('class', 'new-class');
+			alert('Класс изменен! Нажмите на первую кнопку чтобы проверить это!')
+		}
+	</script>
+    <p id="test" class="class my-class">Абзац с class="class my-class". Класс "my-class" задает красный цвет</p>
+    <input type="submit" value="Нажми - и я выведу класс абзаца." onclick="show()"><br>
+    <input type="submit" value="Нажми - и я изменю атрибут class для абзаца на 'new-class'." onclick="del()">   -->
+
+	<!-- Задачи -->
+
+	<!-- 11 -->
+	<!-- <script>
+		function func(elem){
+			var text = document.getElementById('text');
+			text.innerHTML = elem.value;
+		}
+	</script>
+    <input type="text" name="" placeholder="Введи в меня текст!" id="test" onkeyup="func(this)">
+    <span id="text"></span>  -->
+
+	<!-- 14 -->
+	<!-- <script>
+		function func(){
+			var elements = document.getElementsByTagName('p');
+			for (var i = 0; i < elements.length; i++){
+				elements[i].innerHTML = i;
+			}
+		}
+	</script>
+    <p>Абзац с текстом.</p>
+    <p>Абзац с текстом.</p>
+    <p>Абзац с текстом.</p>
+    <p>Абзац с текстом.</p>
+    <p>Абзац с текстом.</p>
+    <p>Абзац с текстом.</p>
+    <p>Абзац с текстом.</p>
+    <p>Абзац с текстом.</p>
+    <input type="submit" value="Нажмите на меня!" onclick="func()">  -->
+
+	<!-- 15 -->
+	<!-- <script>
+		function func(){
+			var elements = document.getElementsByTagName('p');
+			for (var i = 0; i < elements.length; i++){
+				elements[i].innerHTML = i + '. ' + elements[i].innerHTML;
+			}
+		}
+	</script>
+    <p>Абзац с текстом</p>
+    <p>Абзац с текстом</p>
+    <p>Абзац с текстом</p>
+    <p>Абзац с текстом</p>
+    <p>Абзац с текстом</p>
+    <p>Абзац с текстом</p>
+    <p>Абзац с текстом</p>
+    <p>Абзац с текстом</p>
+    <input type="submit" value="Нажмите на меня!" onclick="func()"> -->
+
+	<!-- Задачи -->
+
+	<!-- 11 -->
+	<!-- <script>
+	function getSecondsToTomorrow() {
+		let now = new Date();
+		let hour = now.getHours();
+		let minutes = now.getMinutes();
+		let seconds = now.getSeconds();
+		let totalSecondsToday = (hour * 60 + minutes) * 60 + seconds;
+		let totalSecondsInADay = 86400;
+
+		return totalSecondsInADay - totalSecondsToday;
+}
+	</script> -->
+
+	<!-- 12 -->
+	<!-- <span id="spanOld"></span>
+    <input type="text" name="" id="old" onchange="funcOld(this)"><br>
+    <script type="text/javascript">
+        function funcDay(elem){
+            return elem / 1000/60/60/24;
+        }
+
+        function funcOld(elem){
+            var date = new Date();
+            var now = Math.floor(funcDay(date.getTime()));
+            var arr = String(elem.value).split('-');
+            var strDate = date.getFullYear() + '-' + arr[1] + '-' + arr[2];
+            var span = document.getElementById('spanOld');
+            var newTime = Math.floor(funcDay(Date.parse(strDate)));
+            var start = date.getFullYear() + '-01-01';
+            var theEnd = date.getFullYear() + '-12-' + date.getDate();
+            var startTime = funcDay(Date.parse(start));
+            var theEndTime = funcDay(Date.parse(theEnd));
+            if (newTime > now){
+                var day = (newTime - now);
+            };
+            if(newTime === now){
+                day = 0;
+            };
+            if (newTime < now){
+                day = ((theEndTime - now) + (newTime - startTime));
+            };
+            span.textContent = Math.ceil(day);
+        }
+    </script> -->
+
+	<!-- Задачи для решения -->
+
+	<!-- 2 -->
+	<!-- <style>
+		input {
+			width: 200px;
+		}
+		#wrapper, #test {
+			text-align: center;
+		}
+		#test {
+			font-size: 24px;
+		}
+	</style>
+	<script>
+		//Запускает таймер
+		function go(){
+			window.setInterval(timer, 1000);
+		}
+		function timer(){
+			var test = document.getElementById('test');
+			test.innerHTML = parseInt(test.innerHTML)+1;
+		}
+	</script>
+	<p id="test">
+		0
+	</p>
+	<input type="submit" value="Нажмите на меня!" onclick="go()"> -->
+
+	<!-- 2 -->
+	<!-- <style>
+		#wrapper, #clock {
+			text-align: center;
+		}
+		#clock {
+			font-size: 40px;
+			margin: 0;
+		}
+	</style>
+	<script>
+		//Запускает таймер
+		function go(){
+			window.timerId = window.setInterval(timer, 500);
+		}
+		function timer(){
+			var clock = document.getElementById('clock');
+			var date = new Date();
+			clock.innerHTML = addZero(date.getHours())+':'+addZero(date.getMinutes())+':'+addZero(date.getSeconds());
+		}
+		function addZero(num){
+			if(num <=9) return '0'+num;
+				else return num;
+		}
+	</script>
+	<body onload="go()">
+		<div id="wrapper">
+			<p id="clock"></p>
+		</div>
+	
+	</body> -->
+
+	<!-- 3 -->
+	<!-- <style>
+		input {
+			width: 200px;
+		}
+		#wrapper, #test {
+			text-align: center;
+		}
+		#test {
+			font-size: 24px;
+		}
+	</style>
+	<script>
+		function go(){
+			window.timerId = window.setInterval(timer, 300);
+			document.getElementById('go').disabled = true;
+		}
+		function stop(){
+			window.clearInterval(window.timerId);
+		}
+		function timer(){
+			var test = document.getElementById('test');
+			var number = parseInt(test.innerHTML)-1;
+			test.innerHTML = number;
+			if(number == 0) {
+				stop();
+				var timetStop = document.getElementById('stop');
+				timetStop.innerHTML = 'Обратный отсчет завершен.';
+			}
+		}
+	</script>
+	<div id="wrapper">
+		<p id="test">0</p>
+		<p id="stop">Обратный отсчет завершен.</p>
+		<input type="submit" value="Запустить таймер!" onclick="go()" id="go" disabled="">
+	</div> -->
+
+	<!-- 8 -->
+	<!-- <style>
+		
+		input {
+			width: 200px;
+		}
+		#wrapper {
+			text-align: center;
+		}
+		table {
+			margin: 0px auto;
+		}
+		td, th {
+			height: 30px;
+			width: 100px;
+		}
+	
+	</style>
+	<script>
+		function go(){
+			window.timerId = window.setInterval(timer, 1000);
+		}
+		function timer(){
+			var seconds = document.getElementById('seconds');
+			var minutes = document.getElementById('minutes');
+			var hours = document.getElementById('hours');
+			var now = new Date();
+			var midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1, 0, 0, 0);
+			var diff =  Math.floor((midnight - now)/1000);
+			var hoursRemain   = Math.floor(diff/(60*60));
+			var minutesRemain = Math.floor((diff-hoursRemain*60*60)/60);
+			var secondsRemain = Math.floor(diff%60);
+			hours.innerHTML   = hoursRemain;
+			minutes.innerHTML = addZero(minutesRemain);
+			seconds.innerHTML = addZero(secondsRemain); 
+		}
+		function addZero(num){
+			if(num <=9) return '0'+num;
+				else return num;
+		}
+	</script>
+	<body onload="go()">
+		<div id="wrapper">
+			<p>
+				До полуночи осталось:
+			</p>
+			<table border="1" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<th>Часы</th>
+					<th>Минуты</th>
+					<th>Секунды</th>
+				</tr>
+				<tr>
+					<td id="hours">9</td>
+					<td id="minutes">32</td>
+					<td id="seconds">55</td>
+				</tr>
+			</tbody></table>
+		</div>
+	
+	</body> -->
+</body>
+</html>
